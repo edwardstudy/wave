@@ -75,6 +75,7 @@ func (h *Handler) getCurrentChildren(obj *appsv1.Deployment) ([]Object, error) {
 	return children, nil
 }
 
+// @DOC we need this functionality to get all Statefulset's configMaps/secrets
 // getChildNamesByType parses the Depoyment object and returns two sets,
 // the first containing the names of all referenced ConfigMaps,
 // the second containing the names of all referenced Secrets

@@ -60,6 +60,7 @@ func (h *Handler) HandleDeployment(instance *appsv1.Deployment) (reconcile.Resul
 		return h.handleDelete(instance)
 	}
 
+	// @DOC existing is old and current is new
 	// Get all children that have an OwnerReference pointing to this instance
 	existing, err := h.getExistingChildren(instance)
 	if err != nil {
